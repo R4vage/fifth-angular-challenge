@@ -1,0 +1,47 @@
+:host{
+    display: block;
+    min-height: 5px;
+    min-width: 50px;
+}
+
+
+.ingredient__bread-top, .ingredient__bread-bottom{
+    background-color:#a77932;
+    height: 3em;
+    width: 260px;
+}
+
+
+.ingredient__bread-bottom{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 100px 30px;
+    border-bottom-left-radius: 100px 30px;
+}
+
+
+.ingredient__bread-top{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 100px 30px;
+    border-top-left-radius: 100px 30px;
+}
+
+.ingredient__tomato, .ingredient__lettuce{
+    height: 0.5em;
+    width: 280px;
+    border-radius: 15px;
+}
+.ingredient__tomato{
+    background-color: #fb3434;
+}
+.ingredient__lettuce{
+    background-color:#84d644;
+}
+
+.ingredient__patty{
+    background-color:#633200;
+    height: 2em;
+    width: 280px;
+    border-radius: 10px;
+}

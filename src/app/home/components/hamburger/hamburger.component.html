@@ -1,0 +1,9 @@
+<p>hamburger works!</p>
+
+<div>
+    <app-ingredient ingredientName="bread-top"></app-ingredient>
+    <div *ngFor="let ingredient of $ingredients; index as i">
+        <app-ingredient ingredientName="{{ingredient}}"></app-ingredient>
+    </div>
+    <app-ingredient ingredientName="bread-bottom"></app-ingredient>
+</div>

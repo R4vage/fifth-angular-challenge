@@ -1,0 +1,18 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    h1{
+        align-self: flex-start;
+    }
+}
+
+
+.select__ingredient{
+    text-transform: capitalize;
+    option{
+        text-transform: capitalize;
+    }
+}

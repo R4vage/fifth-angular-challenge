@@ -32,6 +32,11 @@
             ],
             "scripts": []
           },
+          "stylePreprocessorOptions": {
+            "includePaths": [
+              "src/app/styles"
+            ]
+          },
           "configurations": {
             "production": {
               "budgets": [
@@ -103,5 +108,11 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3163ae53-2111-457f-aee9-e6e6dfdcb2f3",
+    "schematicCollections": [
+      "@ngrx/schematics"
+    ]
   }
 }
