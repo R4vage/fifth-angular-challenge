@@ -9,6 +9,19 @@
     }
 }
 
+.chef__form{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    input{
+        all: none;
+        padding-inline: 0.5em;
+        padding-block:0.2em;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+}
 
 .select__ingredient{
     text-transform: capitalize;

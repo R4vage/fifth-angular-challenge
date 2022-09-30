@@ -11,7 +11,7 @@ export const currentHamburgerReducer = createReducer (
     initialState,
     on(addIngredient, (state, payload) => {
         let newList = state.ingredients.slice(0)
-        newList.splice (payload.index, 0, payload.ingredient)
+        newList.splice (payload.index-1, 0, payload.ingredient)
         return {...state, ingredients: newList}        
     }),
 

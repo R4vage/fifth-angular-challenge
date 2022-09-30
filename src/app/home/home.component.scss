@@ -3,4 +3,23 @@
     flex-direction: column;
     padding: 1em;
     gap: 1em;
+    align-items: center;
+}
+
+.cart-menu{
+    background-color: beige;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3em;
+    border-radius: 10px;
+    border: solid 2px black;
+    gap: 2em;
+}
+
+@media (min-width:769px) {
+    .cart-menu{
+        flex-direction: row;
+    }
 }

@@ -1,0 +1,49 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+
+    form{
+        margin-bottom: 0.5em;
+    }
+
+    h3{
+        margin-bottom: 0.5em;
+    }
+}
+
+.ingredient-container{
+    display: grid;
+    gap: 1em;
+    grid-template-areas: "ingredient price button";
+    grid-template-columns: 7em 4em 2em;
+
+    .ingredient{
+        grid-area: ingredient;
+    }
+
+    .price{
+        grid-area: price;
+    }
+    button{
+        all: none;
+        grid-area: button;
+        background-color: bisque;
+        padding-inline:0.5em;
+        padding-block:0.2em;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    p{
+        text-transform: capitalize;
+    }
+}
+
+.total{
+    p{
+        border-top: 2px solid black;
+    }
+  
+}

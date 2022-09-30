@@ -1,14 +1,19 @@
 <h3>Add ingredient:</h3>
-<form [formGroup]="ingredientForm" (ngSubmit)="onSubmit()">
-  <select formControlName="ingredient" class="select__ingredient">
-    <option >lettuce</option>
-    <option>tomato</option>
-    <option>patty</option>
-    <option>bacon</option>
-  </select>
-  <select formControlName="position" >
-    <option>1</option>
-    <option *ngFor="let number of $numbers; index as i">{{number}}</option>
-  </select>
-  <input type="submit" />
+<form [formGroup]="ingredientForm" (ngSubmit)="onSubmit()" class="chef__form">
+  <label> Ingredient: 
+    <select formControlName="ingredient" class="select__ingredient">
+      <option>lettuce</option>
+      <option>tomato</option>
+      <option>patty</option>
+      <option>bacon</option>
+      <option>cheese</option>
+    </select>
+  </label>
+  <label> Position:
+    <select formControlName="position" >
+      <option>1</option>
+      <option *ngFor="let number of $numbers; index as i">{{number}}</option>
+    </select>
+  </label>
+  <input type="submit" value="Add"/>
 </form>

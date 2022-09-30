@@ -2,13 +2,23 @@
     display: block;
     min-height: 5px;
     min-width: 50px;
+
 }
 
+div{
+    transform: scale(0.1);
+    transition: all 1000ms ease-in-out;
+}
+
+.active{
+    transform: scale(1);
+}
 
 .ingredient__bread-top, .ingredient__bread-bottom{
     background-color:#a77932;
     height: 3em;
     width: 260px;
+    background: linear-gradient(131deg, #a77932 0%, rgb(232, 176, 94) 25%, rgb(232, 174, 89) 75%, #a77932 100%);
 }
 
 
@@ -27,7 +37,7 @@
     border-top-left-radius: 100px 30px;
 }
 
-.ingredient__tomato, .ingredient__lettuce{
+.ingredient__tomato, .ingredient__lettuce, .ingredient__bacon, .ingredient__cheese{
     height: 0.5em;
     width: 280px;
     border-radius: 15px;
@@ -37,6 +47,18 @@
 }
 .ingredient__lettuce{
     background-color:#84d644;
+    width: 290px;
+}
+
+.ingredient__bacon{
+    background: rgb(255,0,0);
+    background: linear-gradient(131deg, rgba(159,19,19,1) 0%, rgba(246,86,86,1) 12%, rgba(238,191,119,1) 24%, rgba(159,19,19,1) 36%, rgba(246,86,86,1) 48%, rgba(159,19,19,1) 60%, rgba(238,191,119,1) 72%, rgba(159,19,19,1) 84%, rgba(246,86,86,1) 96%);
+    width: 285px;
+}
+
+.ingredient__cheese{
+    background-color: #d8b167;
+    width: 285px;
 }
 
 .ingredient__patty{

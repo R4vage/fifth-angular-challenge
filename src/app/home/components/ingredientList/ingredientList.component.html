@@ -1,5 +1,26 @@
-<p>ingredients works!</p>
-<div *ngFor="let ingredient of $ingredients; index as i">
-    <p>{{ingredient}}</p>
+<h3>Your ingredients</h3>
+<form [formGroup]="currencyForm" >
+    <label>Select your currency: 
+        <select formControlName="currency" (change)="makePriceList()">
+            <option>USD</option>
+            <option>ARS</option>
+            <option>AUD</option>
+            <option>MXN</option>
+        </select>
+    </label>
+</form>
+
+<div class="ingredient-container">
+    <p class="ingredient">Bread (Basic)</p>
+    <p class="price">{{$priceList[0].toFixed(2)}}$</p>
+</div>
+<div class="ingredient-container" *ngFor="let ingredient of $ingredients; index as i">
+    <p class="ingredient">{{ingredient}}</p>
+    <p class="price">{{$priceList[i+1].toFixed(2)}}$</p>
+    <button (click)="removeIngredient(i)" class="button">X</button>
+</div>
+<div class="ingredient-container total">
+    <p class="ingredient">Total</p>
+    <p class="price">{{getTotal($priceList).toFixed(2)}}$</p>
 </div>
 <app-ingredient></app-ingredient>

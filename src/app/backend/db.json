@@ -1,7 +1,10 @@
 {
   "currentHamburger": {
     "createdAt": "",
-    "ingredients": []
+    "ingredients": [
+      "lettuce",
+      "bacon"
+    ]
   },
   "previousHamburgers": []
 }
