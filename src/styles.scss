@@ -18,26 +18,25 @@ html {
 }
 
 
-
-/* 
-
-
 ::-webkit-scrollbar {
-  width: 13px;
+  width: 8px;
+  
 }
 
 
 ::-webkit-scrollbar-track {
-  background: var(--background-light)
+  background: beige;
+  
+  
 }
 
 
 ::-webkit-scrollbar-thumb {
-  background: var(--darkest-color);
+  background: rgb(118, 118, 116)
+  
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--background-dark);
+  background: black;
 }
- */

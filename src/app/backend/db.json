@@ -1,14 +1,61 @@
 {
   "currentHamburger": {
-    "createdAt": "10/2/2022, 11:24:13 AM",
     "ingredients": [
-      "tomato",
       "bacon",
-      "patty",
       "lettuce"
-    ]
+    ],
+    "createdAt": "10/2/2022, 6:33:58 PM"
   },
   "previousHamburgers": {
-    "hamburgers": []
+    "hamburgers": [
+      {
+        "ingredients": [
+          "lettuce",
+          "bacon",
+          "lettuce",
+          "lettuce"
+        ],
+        "createdAt": "10/2/2022, 6:36:29 PM"
+      },
+      {
+        "ingredients": [
+          "lettuce",
+          "lettuce",
+          "bacon",
+          "lettuce",
+          "lettuce"
+        ],
+        "createdAt": "10/2/2022, 6:36:27 PM"
+      },
+      {
+        "ingredients": [
+          "lettuce",
+          "lettuce",
+          "bacon",
+          "lettuce",
+          "lettuce",
+          "tomato"
+        ],
+        "createdAt": "10/2/2022, 6:36:24 PM"
+      },
+      {
+        "ingredients": [
+          "bacon",
+          "lettuce"
+        ],
+        "createdAt": "10/2/2022, 6:33:58 PM"
+      },
+      {
+        "ingredients": [
+          "bacon",
+          "bacon",
+          "bacon",
+          "lettuce",
+          "lettuce",
+          "tomato"
+        ],
+        "createdAt": "10/2/2022, 6:33:54 PM"
+      }
+    ]
   }
 }

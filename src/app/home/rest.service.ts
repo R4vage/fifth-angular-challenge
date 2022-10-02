@@ -3,29 +3,28 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RestService {
+  constructor(private http: HttpClient) {}
 
-  constructor ( private http: HttpClient ) { }
-
-  public get ( url:string ){
-    return this.http.get (url)
+  public get(url: string) {
+    return this.http.get(url);
   }
 
-  public post ( url:string, body:any) {
-    return this.http.post(url, body)
+  public post(url: string, body: any) {
+    return this.http.post(url, body);
   }
 
-  public updateCurrent(body:Hamburger) {
-    this.post('http://localhost:3000/currentHamburger', body)
-    .subscribe(respuesta => {
-    })
+  public updateCurrent(body: Hamburger) {
+    this.post('http://localhost:3000/currentHamburger', body).subscribe(
+      (respuesta) => {}
+    );
   }
 
-  public updatePreviouses(body:Hamburger[]) {
-    this.post('http://localhost:3000/previousHamburgers', {hamburgers:body})
-    .subscribe(respuesta => {
-    })
+  public updatePreviouses(body: Hamburger[]) {
+    this.post('http://localhost:3000/previousHamburgers', {
+      hamburgers: body,
+    }).subscribe((respuesta) => {});
   }
 }

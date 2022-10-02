@@ -2,15 +2,19 @@ import { Hamburger } from './../models/hamburger.model';
 import { Store } from '@ngrx/store';
 import { RestService } from './../home/rest.service';
 import { Injectable } from '@angular/core';
-import { Actions, concatLatestFrom, createEffect, Effect, ofType } from '@ngrx/effects';
+import {
+  Actions,
+  concatLatestFrom,
+  createEffect,
+  Effect,
+  ofType,
+} from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
 import { map, mergeMap, catchError, switchMap, tap } from 'rxjs/operators';
 
-
-
-@Injectable() 
+@Injectable()
 export class HamburgerEffects {
-/*   $hamburger: Hamburger;
+  /*   $hamburger: Hamburger;
   hamburgerChange$ = createEffect(() =>
     this.actions$.pipe(
       ofType('[CurrentHamburger Add] Add Ingredient') ||
@@ -23,7 +27,6 @@ export class HamburgerEffects {
     )
   ); */
 
-  
   constructor(
     private actions$: Actions,
     private RestService: RestService,
@@ -32,11 +35,11 @@ export class HamburgerEffects {
       previousHamburgers: Hamburger[];
     }>
   ) {
-/*     this.$hamburger = {
+    /*     this.$hamburger = {
       createdAt: '',
       ingredients: [],
     }; */
-/*     this.store.select('currentHamburger').subscribe((state) => {
+    /*     this.store.select('currentHamburger').subscribe((state) => {
       this.$hamburger = state;
     }); */
   }

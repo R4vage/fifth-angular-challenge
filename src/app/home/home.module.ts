@@ -1,16 +1,15 @@
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from "@angular/forms"
+import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import {
-  HamburgerComponent, 
-  IngredientListComponent, 
-  ChefComponent, 
-  IngredientComponent, 
-  SavedHamburgersComponent
-}  from './components';
-
+  HamburgerComponent,
+  IngredientListComponent,
+  ChefComponent,
+  IngredientComponent,
+  SavedHamburgersComponent,
+} from './components';
 
 @NgModule({
   declarations: [
@@ -19,15 +18,9 @@ import {
     IngredientListComponent,
     ChefComponent,
     IngredientComponent,
-    SavedHamburgersComponent
+    SavedHamburgersComponent,
   ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    SharedModule
-  ],
-  exports: [
-    HomeComponent
-  ]
+  imports: [CommonModule, ReactiveFormsModule, SharedModule],
+  exports: [HomeComponent],
 })
-export class HomeModule { }
+export class HomeModule {}

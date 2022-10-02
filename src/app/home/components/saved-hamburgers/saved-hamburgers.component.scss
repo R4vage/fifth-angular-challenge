@@ -62,8 +62,15 @@
     gap: 1em;
     justify-content: space-around;
     position: relative;
-    overflow-y: scroll;
-
+    overflow-y: auto;
+    .ingredients__list{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+        p{
+            text-transform: capitalize;
+        }
+    }
     .cross{
         position: absolute;
         right: 0;
