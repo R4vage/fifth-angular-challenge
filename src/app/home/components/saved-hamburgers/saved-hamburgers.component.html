@@ -6,11 +6,11 @@
 
   <div class="history__modal__container">
     <p class="cross" (click)="closeModal()">X</p>
-    <h3>Your previously saved hamburgers:</h3>
+    <h3 [ngClass]="{ hidden: previousHamburgers.length === 0 }">Your previously saved hamburgers:</h3>
     <p [ngClass]="{ hidden: previousHamburgers.length !== 0 }">
       There are no saved hamburgers
     </p>
-    <div class="history__modal__container">
+    <div class="history__modal__hamburgers" [ngClass]="{ hidden: previousHamburgers.length === 0 }">
         <div
         class="hamburger"
         *ngFor="let hamburger of previousHamburgers; index as i"

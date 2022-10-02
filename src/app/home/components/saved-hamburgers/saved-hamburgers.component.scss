@@ -54,11 +54,28 @@
 
 .history__modal__container{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
     padding: 1.5em;
     border-radius: 15px;
     border: 2px solid black;
+    position: relative;
+    .cross{
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0.5em;
+        cursor: pointer;
+    }
+}
+
+.history__modal__hamburgers{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    padding: 1.5em;
+    border-radius: 15px;
+    
     gap: 1em;
     justify-content: space-around;
     position: relative;
@@ -71,13 +88,7 @@
             text-transform: capitalize;
         }
     }
-    .cross{
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0.5em;
-        cursor: pointer;
-    }
+
 }
 
 .hidden{
