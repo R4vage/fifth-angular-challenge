@@ -20,14 +20,12 @@ export class RestService {
   public updateCurrent(body:Hamburger) {
     this.post('http://localhost:3000/currentHamburger', body)
     .subscribe(respuesta => {
-      console.log('currentHamburger update succesfull')
     })
   }
 
   public updatePreviouses(body:Hamburger[]) {
-    this.post('http://localhost:3000/previousHamburgers', body)
+    this.post('http://localhost:3000/previousHamburgers', {hamburgers:body})
     .subscribe(respuesta => {
-      console.log('previousHamburgers update succesfull')
     })
   }
 }

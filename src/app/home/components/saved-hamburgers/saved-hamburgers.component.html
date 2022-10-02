@@ -1,0 +1,19 @@
+<div class="history__buttons">
+    <button (click)="saveHamburger()">Save Hamburger</button>
+    <button (click)="openModal()">History</button>
+</div>
+<section class="history__modal" [ngClass]="{'modal-opened' : modalOpened}">
+    <div class="history__modal__container">
+        <p class="cross" (click)="closeModal()">X</p>
+        <p [ngClass]="{'hidden' : previousHamburgers.length!==0}">There are no saved hamburgers</p>
+        <div class="hamburger" *ngFor="let hamburger of previousHamburgers; index as i">
+            <p class="hamburger__createdAt">{{hamburger.createdAt}}</p>
+            <p class="hamburger__ingredient" *ngFor="let ingredient of hamburger.ingredients; index as i">{{ingredient}}</p>
+            <div class="history__buttons">
+                <button (click)="selectCurrent(hamburger)">Select</button>
+                <button (click)="deleteHamburger(i)">Delete</button>
+            </div>
+        </div>
+    </div>
+</section>
+<app-warning-modal warningText = {{warningDisplayedText}}></app-warning-modal>

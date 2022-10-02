@@ -1,4 +1,5 @@
 export interface Hamburger {
     createdAt:string,
-    ingredients: string[]
+    ingredients: string[],
+    id?:number
 }

@@ -3,9 +3,17 @@
     flex-direction: column;
     align-items: center;
     gap: 1em;
-
+    background-color: beige;
+    padding: 1em;
+    border-radius: 5px;    
     h1{
         align-self: flex-start;
+    }
+
+    select{
+        font-family: 'Roboto Slab', serif;
+        border-radius: 3px;
+        border: 2px solid grey;
     }
 }
 
@@ -20,6 +28,12 @@
         padding-block:0.2em;
         border-radius: 6px;
         cursor: pointer;
+        font-family: 'Roboto Slab', serif;
+    }
+
+    input:hover{
+        background-color: black;
+        color: white;
     }
 }
 
@@ -28,4 +42,16 @@
     option{
         text-transform: capitalize;
     }
+}
+
+
+.disabled{
+    background-color: grey;
+    cursor: not-allowed !important;
+}
+
+.disabled:hover{
+    background-color: grey !important;
+    cursor: not-allowed;
+    color: black !important;
 }

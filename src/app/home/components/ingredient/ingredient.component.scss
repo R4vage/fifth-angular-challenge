@@ -2,16 +2,11 @@
     display: block;
     min-height: 5px;
     min-width: 50px;
-
+    max-width: 100vw;
 }
 
 div{
-    transform: scale(0.1);
-    transition: all 1000ms ease-in-out;
-}
-
-.active{
-    transform: scale(1);
+    max-width: 90vw;
 }
 
 .ingredient__bread-top, .ingredient__bread-bottom{

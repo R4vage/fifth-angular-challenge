@@ -12,8 +12,9 @@
   <label> Position:
     <select formControlName="position" >
       <option>1</option>
-      <option *ngFor="let number of $numbers; index as i">{{number}}</option>
+      <option *ngFor="let number of numbers; index as i">{{number}}</option>
     </select>
   </label>
-  <input type="submit" value="Add"/>
+  <input type="submit" value="Add" [ngClass]="{'disabled' : this.hamburger.ingredients.length > 7}"/>
 </form>
+<app-warning-modal warningText = {{warningText}} ></app-warning-modal>

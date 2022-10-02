@@ -2,23 +2,26 @@ import { Hamburger } from './../models/hamburger.model';
 import { Store } from '@ngrx/store';
 import { RestService } from './../home/rest.service';
 import { Injectable } from '@angular/core';
-import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { Actions, concatLatestFrom, createEffect, Effect, ofType } from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
-import { map, mergeMap, catchError, switchMap } from 'rxjs/operators';
+import { map, mergeMap, catchError, switchMap, tap } from 'rxjs/operators';
+
+
 
 @Injectable() 
 export class HamburgerEffects {
-  $hamburger: Hamburger;
+/*   $hamburger: Hamburger;
   hamburgerChange$ = createEffect(() =>
     this.actions$.pipe(
       ofType('[CurrentHamburger Add] Add Ingredient') ||
         ofType('[CurrentHamburger Remove] Remove Ingredient'),
-      mergeMap(() => {
-        this.RestService.updateCurrent(this.$hamburger);
-      }),
+        concatLatestFrom(action => this.store.select('currentHamburger')),
+        mergeMap((action, number) => {
+          this.RestService.updateCurrent(action[1]);
+        }),
       catchError(() => EMPTY)
     )
-  );
+  ); */
 
   
   constructor(
@@ -29,13 +32,12 @@ export class HamburgerEffects {
       previousHamburgers: Hamburger[];
     }>
   ) {
-    this.$hamburger = {
+/*     this.$hamburger = {
       createdAt: '',
       ingredients: [],
-    };
-    this.store.select('currentHamburger').subscribe((state) => {
+    }; */
+/*     this.store.select('currentHamburger').subscribe((state) => {
       this.$hamburger = state;
-      console.log("effects storechange")
-    });
+    }); */
   }
 }

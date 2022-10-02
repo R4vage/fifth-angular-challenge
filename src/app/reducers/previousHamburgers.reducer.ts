@@ -7,8 +7,11 @@ export const initialState: Hamburger[] = []
 export const previousHamburgersReducer = createReducer (
     initialState,
     on(addHamburger, (state, payload) => {
-        let newArray = state.slice(0)
-        newArray.push(payload.hamburger)
+        let newArray: Hamburger[] = state.slice(0)
+        newArray.unshift(payload.hamburger)
+        if(newArray.length>5){
+            newArray.splice(5)
+        }
         return newArray 
     }),
 
@@ -19,6 +22,11 @@ export const previousHamburgersReducer = createReducer (
     }),
 
     on(replacePreviouses, (state, payload) => {
-        return payload.hamburgers        
+        let hamburgers = payload.hamburgers.slice(0)
+        hamburgers.sort((a:any,b:any) => {
+            return b.id - a.id
+        })
+        hamburgers.splice(5)
+        return hamburgers      
     }),
 )

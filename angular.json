@@ -27,15 +27,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/styles"
+              ]
+            },
             "styles": [
               "src/styles.scss"
             ],
             "scripts": []
-          },
-          "stylePreprocessorOptions": {
-            "includePaths": [
-              "src/app/styles"
-            ]
           },
           "configurations": {
             "production": {

@@ -1,3 +1,4 @@
+import { RestService } from './../../rest.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Hamburger } from './../../../models/hamburger.model';
 import { Component, OnInit } from '@angular/core';
@@ -13,17 +14,24 @@ import { PricerService } from './pricer.service'
 })
 export class IngredientListComponent implements OnInit {
   
+  hamburger: Hamburger
   $ingredients:string[];
   $priceList: number[];
   constructor( 
     private store: Store<{ currentHamburger: Hamburger, previousHamburgers: Hamburger[] }>,
-    private pricerService:PricerService
+    private pricerService:PricerService,
+    private restService: RestService
     ) { 
+    this.hamburger = {
+      createdAt : "",
+      ingredients: []
+    }
     this.$ingredients = []
     this.$priceList = []
     this.store.select('currentHamburger').subscribe(state => {
       this.$ingredients = state.ingredients
       this.makePriceList()
+      this.hamburger = state
     })
   }
 
@@ -36,6 +44,7 @@ export class IngredientListComponent implements OnInit {
 
   removeIngredient(index:number){
     this.store.dispatch(removeIngredient({ index }));
+    this.restService.updateCurrent(this.hamburger)
   }
 
   makePriceList () {

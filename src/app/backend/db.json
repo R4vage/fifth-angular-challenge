@@ -1,10 +1,14 @@
 {
   "currentHamburger": {
-    "createdAt": "",
+    "createdAt": "10/2/2022, 11:24:13 AM",
     "ingredients": [
-      "lettuce",
-      "bacon"
+      "tomato",
+      "bacon",
+      "patty",
+      "lettuce"
     ]
   },
-  "previousHamburgers": []
+  "previousHamburgers": {
+    "hamburgers": []
+  }
 }

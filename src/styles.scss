@@ -14,11 +14,10 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Roboto Slab', serif;
+  overflow-x: hidden;
 }
 
-body{
-  background-color: var(--background-color);
-}
+
 
 /* 
 
